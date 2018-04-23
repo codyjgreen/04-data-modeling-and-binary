@@ -1,13 +1,6 @@
 'use strict';
 
-const fs = require('fs');
+const args = process.argv;
+const transform = require('./lib/getargs').getArgs;
 
-fs.readFile('../test/assest/penguin.bmp', (err, data) => {
-    if (err){
-        cb(err);
-        return;
-    }
-
-
-
-})
+transform(args);
